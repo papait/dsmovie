@@ -1,9 +1,13 @@
 package com.devesuprior.dsmovie.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GenerationType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -19,6 +23,9 @@ public class Movie {
 	private Double score;
 	private Integer count;
 	private String image;
+	// Estou fazendo uma referencia para todo conjunto de coleção desse filme que eu determinar
+	@OneToMany(mappedBy = "id.movie")
+	private Set<Score> scores = new HashSet<>();
 	
 	public Movie () {
 		
@@ -72,5 +79,7 @@ public class Movie {
 		this.image = image;
 	}
 	
-	
+	public Set<Score> getScores(){
+		return scores;
+	}
 }
