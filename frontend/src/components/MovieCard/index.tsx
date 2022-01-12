@@ -1,5 +1,4 @@
 import MovieScore from "components/MovieScore";
-import Listing from "pages/Listing";
 import { Link } from "react-router-dom";
 
 function MovieCard() {
