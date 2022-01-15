@@ -1,5 +1,4 @@
 
-import { getAllByAltText } from '@testing-library/react';
 import { ReactComponent as Arrow} from 'assets/img/arrow.svg';
 import { MoviePage } from 'types/movie';
 import './styles.css';
